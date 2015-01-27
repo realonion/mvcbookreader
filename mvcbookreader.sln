@@ -5,17 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvcbookreader", "mvcbookreader\mvcbookreader.csproj", "{2AD003D4-6346-487C-AD21-14077BEEBD3E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{A1E50A35-DD03-4FA4-A209-5E31122D083C}"
-	ProjectSection(SolutionItems) = preProject
-		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
-		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{DD6B6935-F9E8-491B-AA48-B0BB8238EC24}"
-	ProjectSection(SolutionItems) = preProject
-		PublishScripts\Configurations\mvcbookreader-WAWS-dev.json = PublishScripts\Configurations\mvcbookreader-WAWS-dev.json
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,8 +18,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{DD6B6935-F9E8-491B-AA48-B0BB8238EC24} = {A1E50A35-DD03-4FA4-A209-5E31122D083C}
 	EndGlobalSection
 EndGlobal
