@@ -1,0 +1,29 @@
+﻿@model mvcbookreader.Models.FileModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Hello!</h1>
+    <p class="lead">Try upload a text file book (bookname.txt) and book analyzer will tell you something about this book</p>
+    <p>
+        @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="file" />
+            <input type="submit" name="Submit" id="Submit" value="Upload" />
+            @Html.ValidationMessageFor(x => x.File)
+        }
+    </p>
+</div>
+
+<div class="row">
+    @if (!String.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div class="col-md-12 warning">
+            <h2>Some error occurred when uploading the book:</h2>
+            <p>
+                @ViewBag.ErrorMessage
+            </p>
+        </div>
+    }
+</div>

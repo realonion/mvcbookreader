@@ -1,0 +1,27 @@
+﻿@using mvcbookreader.Models
+@model mvcbookreader.Models.BookAnalyzerResultModel
+@{
+    ViewBag.Title = "Result";
+}
+<h2>Book Analyzer has found out that this book</h2>
+@if (Model.MostFrqWord != null)
+{
+    <p>Most frequent word: "@Model.MostFrqWord.Text" occured @Model.MostFrqWord.Frequency times</p>
+}
+@if (Model.MostFrq7CharWord != null)
+{
+    <p>Most frequent 7 character word: "@Model.MostFrq7CharWord.Text" occured @Model.MostFrq7CharWord.Frequency times</p>
+}
+
+<p>Highest scoring word(s) (according to Scrabble) are:</p>
+
+@foreach (WordModel word in @Model.ListOfHighestScoreWords)
+{
+   <p>"@word.Text" with a score of @word.Score</p>
+}
+
+<br />
+
+<p>
+    @Html.ActionLink("Try another book", "Index")
+</p>
